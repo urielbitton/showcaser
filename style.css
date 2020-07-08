@@ -1,0 +1,1134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Lato, sans-serif;
+    background: #fafafa;
+}
+:root {
+    --bg: #22253d;
+    --color1: #ff0364;
+    --color2: #ffc403;
+    --grad: linear-gradient(160deg, rgba(255,3,100,1) 0%, rgba(255,196,3,1) 100%);
+    --blugrad: linear-gradient(124deg, rgba(2,134,255,1) 0%, rgba(0,255,226,1) 100%);
+    --wideshadow: 0 1px 20px rgba(0,0,0,0.2);
+    --lightbg: #292c47;
+}
+::selection {
+    background: var(--color2);
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color2); 
+    border-radius: 40px;
+}
+ 
+.grid {
+    position: relative;
+    width: 1300px;
+    padding: 20px 0;
+    margin: auto;
+}
+.xgrid {
+    padding: 50px 0;
+}
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,a,i,img,input,li,button, small, span {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+hr {
+    border: none;
+}
+img {
+    object-fit: cover;
+}
+input,textarea,select {
+    outline: none;
+    transition: all 0.2s;
+}
+input:hover,textarea:hover,select:hover, input:focus,textarea:focus,select:focus {
+    filter: brightness(110%);
+}
+button {
+    position: relative;
+    padding: 10px 25px;
+    border: none;
+    background: none;
+    color: #fff;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.spacer {
+    height: 50px;
+}
+.spacerl {
+    height: 120px;
+}
+.clear {
+    clear: both;
+}
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg);
+    text-align: center;
+    z-index: 900;
+}
+.topbar > div {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+.topbar > div i {
+    font-size: 15px;
+}
+.barleft {
+    float: left;
+}
+.barleft > div {
+    position: relative;
+    float: left;
+    min-width: 50px;   
+    border-right: 1px solid #414773;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.barright {
+    float: right;
+}
+.barright > div {
+    position: relative;
+    float: right;
+    min-width: 50px;    
+    border-left: 1px solid #414773;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.barright > div:hover {
+    background: #333757;
+}
+.barleft > div:hover {
+    background: #333757;
+}
+.projbtn {
+    background: var(--grad);
+    transition: all 0.2s;
+}
+.barleft .projbtn:hover {
+    background: var(--grad);
+    filter: brightness(120%);
+}
+.topbar h6 {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px;
+}
+.topbar h6 hr {
+    position: relative;
+    top: 5px;
+    width: 3px;
+    height: 15px;
+    border-radius: 40px;
+    background: #fff;
+    display: inline-block;
+    margin: 3px 2px;
+    transform: rotate(20deg);
+}
+.topbar h6 hr:first-child {
+    background: var(--color1);
+}
+.topbar h6 hr:last-child {
+    background: var(--color2);
+    margin-right: 10px;
+}
+
+nav {
+    position: fixed;
+    top: 48px;
+    width: 100%;
+    padding: 25px;
+    background: rgba(34, 37, 61,0.9);
+    z-index: 900;
+}
+.menu {
+    position: relative;
+    text-align: center;
+}
+.menu a {
+    color: #fff;
+    font-size: 13px;
+    margin: auto 5px;
+    padding: 10px;
+    transition: all 0.2s;
+}
+.menu a:hover {
+    color: var(--color2);
+}
+.menu a i {
+    margin-left: 10px;
+    top: 1px;
+}
+nav button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--grad);
+}
+nav button:hover {
+    filter: brightness(120%)
+} 
+ 
+.app {
+    position: relative;
+    margin-top: 110px;
+    display: none;
+    background-image: url(images/mainbg.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+.projects {
+    display: block;
+    min-height: 100vh;
+}
+.titlediv {
+    position: relative;
+    margin-top: 50px;
+}
+.titlediv h1 {
+    font-size: 25px;
+    color: var(--bg);
+    z-index: 10;
+}
+.titlediv .jumbo {
+    position: absolute;
+    font-weight: 900;
+    font-size: 130px;
+    top: -60px;
+    left: 50px;
+    opacity: 0.02;
+    z-index: 0;
+    user-select: none;
+}
+.titlediv small {
+    color: #777;
+    display: block;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 10;
+    float: left;
+}
+.titlediv small:hover {
+    color: var(--color1);
+}
+.titlediv small i {
+    margin-right: 5px;
+}
+.titlediv h4 {
+    text-align: center;
+    display: inline-block;
+}
+
+.projcont {
+    position: relative;
+    clear: both;
+}
+.projbox {
+    position: relative;
+    display: inline-table;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+    width: 330px;
+    height: 210px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--wideshadow);
+    padding: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.projbox:hover img {
+    opacity: 0.05;
+}
+.projbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+} 
+.projbox h5 {
+    opacity: 0;
+    color: #333;
+    font-weight: 500;
+    font-size: 22px;
+    transform: scale(0.8);
+    transition: all 0.2s;
+}
+.projbox:hover {
+    box-shadow: 0 1px 27px rgba(0,0,0,0.4);
+}
+.projbox:hover h5 {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+.projcont .projbox:hover .heart {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+.projcont .projbox .heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 19px;
+    margin: auto;
+    color: #333;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.projcont .projbox h4 {
+    color: #fff;
+    font-size: 25px;
+}
+.projcont .projbox i {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+
+.bigbox {
+    width: 400px;
+    height: 250px;
+}
+.bigbox:first-child {
+    background: linear-gradient(147deg, rgba(83,3,255,1) 0%, rgba(159,3,255,1) 69%);
+}
+.bigbox:nth-child(2) {
+    background: var(--blugrad);
+}
+.bigbox:last-child {
+    background: var(--grad);
+}
+.bigbox {
+    margin-left: 0;
+}
+
+.navlinks {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.navlinks h4 {
+    display: inline-block;
+    color: #777;
+    margin: auto 20px;
+    padding: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.navlinks h4:hover {
+    color: #000;
+}
+
+
+.showpage .section1 {
+    background: var(--lightbg);
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.showpage .section2 {
+    background: var(--bg);
+    width: 100%;
+    min-height: 500px;
+}
+.showpage h6 {
+    color: #999;
+    font-size: 14px;
+}
+.showpage h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    width: 450px;
+}
+.showpage .slogo hr {
+    position: relative;
+    width: 13px;
+    height: 55px;
+    border-radius: 40px;
+    background: #fff;
+    display: inline-block;
+    margin: auto 7px;
+    transform: rotate(20deg);
+}
+.showpage .slogo hr:first-child {
+    background: var(--color1);
+}
+.showpage .slogo hr:last-child {
+    background: var(--color2);
+}
+
+.showpage .sep {
+    width: 80px;
+    height: 2px;
+    background: #aaa;
+    margin-left: 0;
+    margin-top: 20px;
+}
+.showpage small {
+    position: relative;
+    display: block;
+    color: #ddd;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.2s;
+    float: left;
+}
+.showpage .link i {
+    margin-right: 10px;
+}
+.showpage .link:hover {
+    color: var(--color1);
+}
+.showpage img {
+    border-radius: 10px;
+    margin-top: 40px;
+    max-height: 700px;
+}
+
+.secleft {
+    position: relative;
+    float: left;
+    width: 45%;
+}
+.secleft a {
+    color: #ddd;
+    transition: all 0.2s;
+}
+.secleft small:hover a {
+    color: var(--color1);
+}
+.secright {
+    position: relative;
+    float: right;
+    width: 45%;
+}
+.showpage h4 {
+    color: #fff;
+    font-size: 27px;
+}
+.showpage .secright h4 {
+    margin-top: 30px;
+}
+.showpage .section {
+    padding: 50px 0;
+}
+.showpage p {
+    color: #999;
+    font-size: 15px;
+    width: 500px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    display: block;
+}
+.showpage img {
+    width: 90%;
+}
+.showpage .secbox {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    margin-left: 0;
+    padding: 30px;
+    box-shadow: var(--wideshadow);
+    background: var(--bg);
+    transition: all 0.2s;
+    cursor: default;
+    border-radius: 10px;
+}
+.showpage .secbox:hover {
+    background: var(--color2);
+}
+.showpage .secbox:hover h3, .showpage .secbox:hover i {
+    color: #333
+}
+.showpage .secbox h3 {
+    font-size: 26px;
+    color: #fff;
+    width: 60%;
+    transition: all 0.2s;
+}
+.showpage .secbox i {
+    font-size: 26px;
+    color: #fff;
+    margin-right: 20px;
+    transition: all 0.2s;
+}
+
+.secright small {
+    float: left;
+}
+.secright small i {
+    margin-left: 5px;
+    top: 1px;
+    color: var(--color2);
+    transition: margin 0.3s;
+}
+.secright small a {
+    color: var(--color2);
+}
+.secright small:hover a {
+    color: var(--color1);
+}
+.secright small:hover i {
+    margin-left: 10px;
+    color: var(--color1);
+}
+.showpage .shape1 {
+    position: absolute;
+    top: 250px;
+    left: -200px;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    transform: rotate(110deg);
+    background: rgba(255,255,255,0.02);
+}
+.showpage .shape2 {
+    position: absolute;
+    top: -100px;
+    right: 0px;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background: rgba(255,255,255,0.01);
+}
+.showpage .shape3 {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    transform: rotate(-20deg);
+    background: rgba(255,255,255,0.005);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.showpage .backlink {
+    margin-top: 50px;
+}
+.showpage .backlink:hover {
+    color: var(--color2)
+}
+.backlink i {
+    margin-right: 5px;
+    transition: all 0s;
+}
+.backtop {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color2);
+    border-radius: 100%;
+    z-index: 100;
+    opacity: 0.6;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.backtop:hover {
+    opacity: 1;
+}
+.backtop i {
+    font-size: 25px;
+    color: #fff;
+}
+.showpage .backfloat {
+    position: fixed;
+    right: 20px;
+    bottom: 130px;
+    padding: 10px 20px;
+    background: var(--color2);
+    z-index: 100;
+    display: none;
+}
+.showpage .backfloat i {
+    margin-right: 5px;
+}
+ 
+[showcase] {
+    display: none;
+} 
+ 
+   
+/* Home page*/
+.webnav nav {
+    position: fixed;
+    top: -100px;
+    transition: all 0.3s;
+    box-shadow: var(--wideshadow);
+}
+.mobbtn {
+    position: fixed;
+    top: 30px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 55px 50px 70px 55px;
+    background: var(--grad);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 900;
+    box-shadow: var(--wideshadow);
+    transition: all 0.4s;
+}
+.accountbtn {
+    position: absolute;
+    top: 12px;
+    padding: 15px 25px;
+    z-index: 900;
+}
+.accountbtn:hover {
+    filter: brightness(110%);
+}
+.accountbtn i {
+    margin-right: 10px;
+}
+.navbtn1 {
+    right: 50px;
+    background: var(--blugrad)
+}
+.navbtn2 {
+    right: 200px;
+    background: var(--grad);
+} 
+.navbtn2:hover {
+    filter: brightness(120%);
+}
+.mobbtn:hover {
+    border-radius: 40px 50px 55px 70px;
+}
+.mobbtn:hover hr:nth-child(1) {
+    width: 35%;
+}
+.mobbtn:hover hr:nth-child(2) {
+    width: 70%;
+    transition-delay: 0.2s;
+}
+.mobbtn:hover hr:nth-child(3) {
+    width: 80%;
+    transition-delay: 0.3s;
+}
+
+.mobbtn hr {
+    position: relative;
+    top: 3px;
+    left: 5px;
+    background: #fff;
+    height: 3px;
+    border-radius: 20%;
+    margin: 6px 0;
+    transition: all 0.3s;
+}
+.mobbtn hr:nth-child(1) {
+    width: 80%
+}
+.mobbtn hr:nth-child(2) {
+    width: 40%
+}
+.mobbtn hr:nth-child(3) {
+    width: 35%
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/webbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+.bg h1 {
+    font-size: 55px;
+    width: 600px;
+    color: #fff;
+    font-weight: 100;
+}
+.bg h6 {
+    color: #999;
+    width: 500px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.bg button {
+    background: var(--grad);
+    margin-top: 30px;
+    padding: 15px 25px;
+}
+.bg button i {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    opacity: 0;
+}
+.bg button:hover {
+    padding-right: 50px;
+}
+.bg button:hover i {
+    opacity: 1;
+}
+
+.sec {
+    position: relative;
+    background: linear-gradient(0deg, #0c0d1c 0%, #22253d 100%);
+    text-align: center;
+    overflow: hidden;
+} 
+.sec hr {
+    width: 100px;
+    background: var(--grad);
+    height: 2px;
+    margin-bottom: 30px;
+}
+.sec h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+}
+.sec h6 {
+    color: #999;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.sec .secbox {
+    position: relative;
+    margin: 50px 30px;
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #1b1d36 0%, #22253d 100%);
+    width: 320px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: var(--wideshadow);
+    padding: 30px;
+}
+.sec .smallbox {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+    height: 130px;
+    background: var(--bg);
+    box-shadow: var(--wideshadow);
+    border-radius: 40px 50px 55px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .smallbox img {
+    width: 80%;
+    height: 80%;
+}
+.secbox h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #eee;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.secbox small {
+    color: #aaa;
+    line-height: 1.7
+}
+.leftsec {
+    position: relative;
+    float: left;
+    width: 45%;
+    text-align: left;
+}
+.leftsec img, .rightsec img {
+    width: 90%;
+    z-index: 10;
+    user-select: none;
+}
+.leftsec h2, .rightsec h2 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+    z-index: 10;
+}
+.leftsec p, .rightsec p {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.7;
+    z-index: 10;
+}
+.rightsec {
+    position: relative;
+    float: right;
+    width: 45%;
+    text-align: right;
+}
+.leftsec h2 {
+    background: var(--blugrad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rightsec h2 {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.socials i {
+    font-size: 28px;
+    margin: 10px 10px;
+    color: #fff;
+    transition: all 0.3s;
+} 
+.socials a {
+    margin: 20px 30px;
+}
+.socials a:hover i {
+    transform: scale(1.25);
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.webshape1 {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    opacity: 0.03;
+    border-radius: 55% 50% 70% 55%;
+    z-index: 0;
+}
+.webshape2 {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 500px;
+    height: 400px;
+    background: #fff;
+    opacity: 0.02;
+    border-radius: 40% 50% 55% 70%;
+    z-index: 0;
+}
+
+.portpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.pageiso {
+    width: 100px;
+}
+.portcardscont {
+    display: flex;
+}
+.portcard {
+    position: relative;
+    display: inline-table;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    height: 300px;
+    background: var(--bg);
+    box-shadow: var(--wideshadow);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.portcard:hover {
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+    filter: brightness(110%)
+}
+.portcard h4 {
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    margin-top: 70px;
+}
+.portcard img {
+    width: 100px;
+}
+.portpage h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.portpage h3 span {
+    font-weight: 900;
+    background: var(--blugrad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.portpage h6 {
+    font-size: 13px;
+}
+
+.glowimg {
+    width: 200px;
+    animation: spin 40s linear infinite;
+    box-shadow:0 0 50px rgba(128, 46, 255,0.6);
+    border-radius: 100%;
+}
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to{transform: rotate(360deg)}
+}
+.portpage form {
+    position: relative;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--wideshadow);
+    background: linear-gradient(180deg, #242640 0%, #191c30 100%);
+    display: grid;
+    grid-template-columns: auto auto;
+    transition: all 0.3s;
+}
+.portpage form label {
+    position: relative;
+    margin: 25px 10px;
+    display: inline-table;
+    text-align: left;
+}
+.portpage form label h5 {
+    text-align: left;
+    color: #ddd;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+.portpage form input, .portpage form select {
+    border: none;
+    background: #111324;
+    border-radius: 40px;
+    padding: 15px 40px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #eee;
+    width: 350px;
+}
+.portpage form input::placeholder {
+    font-size: 12px;
+    color: #555;
+}
+.portpage form select {
+    width: 100%;
+}
+.portpage form select option {
+    color: #eee;
+}
+.portpage form textarea {
+    background: #111324;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    color: #eee;
+}
+.portpage form textarea::placeholder {
+    color: #555;
+}
+.msglabel {
+    grid-column: 1 / span 2;
+}
+.portpage form button {
+    background: var(--grad);
+    padding: 15px 10px;
+    width: 160px;
+    margin-top: 20px;
+    box-shadow: var(--wideshadow);
+}
+.portpage form button:hover {
+    filter: brightness(115%);
+}
+.portpage form button i {
+    margin-right: 10px;
+} 
+.aboutpage p {
+    width: 700px;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.7;
+}
+.homepagebody {
+    background: var(--bg);
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    background: var(--bg);
+}
+footer p {
+    font-size: 13px;
+    top: 3px;
+    color: #fff;
+    float: left;
+    margin-left: 10px;
+}
+footer p a {
+    color: var(--color1);
+}
+footer p a {
+    color: #fff;
+}
+footer p a:hover {
+    text-decoration: underline;
+}
+footer hr {
+    position: relative;
+    float: left;
+    width: 3px;
+    height: 15px;
+    border-radius: 40px;
+    background: #fff;
+    display: inline-block;
+    margin: 3px 2px;
+    transform: rotate(20deg);
+}
+footer hr:first-child {
+    background: var(--color1);
+}
+footer hr:nth-child(2) {
+    background: var(--color2);
+    margin-right: 0px;
+} 
+
+
+
+
+@media (max-width: 1300px) {
+    .grid {
+        width: 97%;
+    }
+}
+@media (max-width:1080px) {
+    .app {
+        text-align: center;
+    }
+    .showpage {
+        text-align: left;
+    }
+}
+@media (max-width:1000px) {
+    
+    .showpage .section1 {
+        height: auto;
+        padding: 50px 0;
+    }
+    .secright,.secleft {
+        width: 100%;
+    }
+    
+}
+@media (max-width: 700px) {
+    .menu, nav button {
+        display: none;
+    }
+    .titlediv .jumbo {
+        font-size: 60px;
+        left: 30px;
+    }
+    nav {
+        height: 70px;
+    }
+    .showpage span, .showpage p, .showpage h2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .topbar .barleft, .topbar .barright {
+        display: none;
+    }
+    .topbar {
+        height: 50px;
+    }
+    .bigbox {
+        width: 95%;
+    }
+}
+

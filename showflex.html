@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head> 
+        <script src="http://reactor-js.com/reactor/reactorjs_2.4.2.js"></script> 
+	</head>     
+	<body>      
+          
+         
+        <reactor-container>{show-caser}</reactor-container>
+        <reactor-vars>{maintitle,subtitle,mainwords,weblink,applink, sectitle1,sectitle2,sectitle3,secwords1,secwords2,secwords3,boxtitle1,boxtitle2,boxtitle3,boxicon1,boxicon2,boxicon3, case}</reactor-vars>
+        <reactor-links>{weblink,applink}</reactor-links>
+        <reactor-imgs>{secimg1,secimg2,secimg3}</reactor-imgs>
+
+        <div class="reactor">   
+            <div class="section1"> 
+            <div class="grid"> 
+                <div class="shape1"></div> 
+                <div class="shape2"></div> 
+                <div class="shape3"></div>
+                <div class="spacers"></div>
+                <div class="secleft">  
+                <div class="slogo"><hr><hr></div>
+                <h6>{maintitle}</h6>
+                <h2>{subtitle}</h2>
+                <hr class="sep">
+                <small class="link"><i class="fas fa-link"></i><a href='{weblink}' target="_blank">{weblink}</a></small>
+                </div>  
+                <div class="secright">
+                    <div class="spacer"></div>
+                    <h4>{maintitle}</h4>
+                    <p>{mainwords}</p>
+                    <small><a href='{applink}' target="_blank">{applinktxt}</a> <i class="fas fa-long-arrow-alt-right"></i></small> 
+                </div>
+                <div class="clear"></div>
+                <small class="backlink"><i class="fas fa-long-arrow-alt-left"></i>back</small>
+            </div>     
+        </div>
+        <div class="section2 section">
+            <div class="grid">
+                <h4>{sectitle1}</h4>
+                <p>{secwords1}</p>
+                <hr class="sep">
+                <img src='{secimg1}'/>
+            </div>
+        </div>
+        <div class="section1 section">
+            <div class="grid">
+                <h4>{sectitle2}</h4>
+                <p>{secwords2}</p>
+                <hr class="sep">
+                <img src='{secimg2}'/>
+            </div>
+        </div>
+        <div class="section2 section">
+            <div class="grid">
+                <h4>{sectitle3}</h4>
+                <p>{secwords3}</p>
+                <hr class="sep">
+                <img src='{secimg3}'/> 
+            </div> 
+        </div> 
+        <div class="section1 section">
+            <div class="grid">
+                <h4>{case}</h4>
+                <div class="secbox">
+                    <a>{boxicon1}</a><h3>{boxtitle1}</h3>
+                </div>
+                <div class="secbox">
+                    <a>{boxicon2}</a><h3>{boxtitle2}</h3>
+                </div>
+                <div class="secbox">
+                    <a>{boxicon3}</a><h3>{boxtitle3}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="backtop"><i class="fas fa-angle-up"></i></div><button class="backfloat"><i class="fas fa-long-arrow-alt-left"></i>back</button>   
+        </div><!--reactor div-->    
+         
+       
+    
+         
+	</body>
+</html>  

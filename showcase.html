@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang=""> 
+<head>
+	<meta charset="utf-8">
+	<title>showcaser</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://reactor-js.com/reactor/reactorjs_2.4.2.js"></script>
+	<link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>   
+  
+<body ng-app="">     
+         
+    <div class="topbar">
+        <div class="barleft">
+            <div><i class="fas fa-search"></i></div>
+            <div><i class="far fa-heart"></i></div>
+            <div class="projbtn"><i class="fas fa-puzzle-piece"></i></div>
+        </div> 
+        <div><h6><hr><hr>showcaser</h6></div>
+        <div class="barright">
+            <div><i class="fas fa-cog"></i></div>
+            <div><i class="fas fa-user-alt"></i></div>
+            <div><i class="far fa-bell"></i></div>
+        </div>
+        <div class="clear"></div> 
+    </div>
+               
+    <div re-beam="navbar.html"></div>
+    
+    <div class="home">
+    
+    <div class="projects app">
+        <div class="grid">
+            <div class="titlediv">
+                <span class="jumbo">Projects</span>
+                <h1>Design Projects</h1>
+            </div>
+            
+            <div class="navlinks"></div>    
+            
+            <div class="projcont"> 
+                <div class="projbox bigbox appbtn">
+                    <i class="fas fa-tablet-alt"></i>
+                    <h4>Apps</h4>
+                </div>
+                <div class="projbox bigbox webbtn">
+                    <i class="fas fa-desktop"></i>                    
+                    <h4>Websites</h4>
+                </div>
+                <div class="projbox bigbox graphicbtn">
+                    <i class="fas fa-palette"></i>
+                    <h4>Product Designs</h4>
+                </div>
+            </div>     
+        </div>
+    </div>  
+     
+    <div class="apps app"> 
+        <div re-beam="appl.html"></div>
+    </div> 
+     
+    <div class="webs app">
+        <div  re-beam="webs.html"></div>
+    </div>
+    
+    <div class="graphics app"> 
+        <div re-beam="graphics.html"></div>
+    </div> 
+    
+    <div class="showpage app">
+         
+        <!-- Reactor JS App-->
+        <div class="re-app"> 
+            
+            <div class="reactorapp">
+                <div ng-include="'showflex.html'"></div> 
+            </div>
+                
+            <div ng-include="'propsflex.html'"></div>
+            
+        
+        
+        </div>   
+    
+    </div>
+     
+    
+     
+    
+    </div> <!--home-->
+    
+    
+    
+    <div re-beam="footer.html">
+        
+    </div>
+ 
+</body>
+
+</html>
